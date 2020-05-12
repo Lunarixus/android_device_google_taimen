@@ -41,6 +41,12 @@ PRODUCT_COPY_FILES += \
 # Gapps
 TARGET_GAPPS_ARCH := arm64
 
+# Evolution-X Official
+EVO_DONATE_URL := https://www.paypal.me/RioTApex
+EVO_MAINTAINER := Lunarixus
+EVO_SUPPORT_URL := https://t.me/EvolutionXZeroxlte
+CUSTOM_BUILD_TYPE := OFFICIAL
+
 PRODUCT_MANUFACTURER := Google
 PRODUCT_BRAND := Android
 PRODUCT_NAME := aosp_taimen
