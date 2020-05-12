@@ -22,6 +22,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 $(call inherit-product, device/google/taimen/device.mk)
 $(call inherit-product-if-exists, vendor/google_devices/taimen/proprietary/device-vendor.mk)
 
+# Boot animation res
+TARGET_BOOT_ANIMATION_RES := 1440
+
 PRODUCT_PACKAGES += \
     Dialer \
     Launcher3QuickStep \
