@@ -21,19 +21,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 # Inherit some common Evolution-X stuff.
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
+# Inherit from device and vendor
 $(call inherit-product, device/google/taimen/device.mk)
 $(call inherit-product-if-exists, vendor/google_devices/taimen/proprietary/device-vendor.mk)
 
 # Boot animation res
 TARGET_BOOT_ANIMATION_RES := 1440
 
+# Build netutils and VNDK
 PRODUCT_PACKAGES += \
-    Dialer \
-    Launcher3QuickStep \
-    WallpaperPicker \
     netutils-wrapper-1.0 \
     vndk_package
 
+# Copy audio effects config and AOSP excluded hardware
 PRODUCT_COPY_FILES += \
     device/google/taimen/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
     frameworks/native/data/etc/aosp_excluded_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/aosp_excluded_hardware.xml
@@ -47,6 +47,7 @@ EVO_MAINTAINER := Lunarixus
 EVO_SUPPORT_URL := https://t.me/EvolutionXZeroxlte
 CUSTOM_BUILD_TYPE := OFFICIAL
 
+# Device info
 PRODUCT_MANUFACTURER := Google
 PRODUCT_BRAND := Android
 PRODUCT_NAME := aosp_taimen
