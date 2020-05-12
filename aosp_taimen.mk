@@ -40,6 +40,8 @@ PRODUCT_COPY_FILES += \
 
 # Gapps
 TARGET_GAPPS_ARCH := arm64
+TARGET_INCLUDE_STOCK_ARCORE := true
+TARGET_INCLUDE_WIFI_EXT := true
 
 # Evolution-X Official
 EVO_DONATE_URL := https://www.paypal.me/RioTApex
