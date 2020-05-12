@@ -33,8 +33,10 @@ DEVICE_PACKAGE_OVERLAYS += device/google/taimen/overlay
 
 # Audio
 PRODUCT_COPY_FILES += \
-    device/google/taimen/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
-    device/google/taimen/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml
+    device/google/taimen/configs/audio/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
+    device/google/taimen/configs/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
+    device/google/taimen/configs/audio/mixer_paths_tavil.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_tavil_taimen.xml \
+    device/google/taimen/configs/audio/audio_platform_info_tavil.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_tavil_taimen.xml
 
 include device/google/wahoo/device.mk
 
@@ -54,26 +56,20 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/google/taimen/init.logging.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.$(PRODUCT_HARDWARE).logging.rc
 
-
+# NFC configuration
 PRODUCT_COPY_FILES += \
-    device/google/taimen/nfc/libnfc-nxp.taimen.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf
+    device/google/taimen/configs/nfc/libnfc-nxp.taimen.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf
 
+# Power HAL
 PRODUCT_COPY_FILES += \
-    device/google/taimen/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
-
-PRODUCT_COPY_FILES += \
-    device/google/taimen/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf \
-    device/google/taimen/thermal-engine-vr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-vr.conf
+    device/google/taimen/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # Thermal HAL
 PRODUCT_COPY_FILES += \
-    device/google/taimen/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json \
-    device/google/taimen/thermal_info_config_evt.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_evt.json
-
-# Audio
-PRODUCT_COPY_FILES += \
-    device/google/taimen/mixer_paths_tavil.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_tavil_taimen.xml \
-    device/google/taimen/audio_platform_info_tavil.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_tavil_taimen.xml
+    device/google/taimen/configs/thermal/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json \
+    device/google/taimen/configs/thermal/thermal_info_config_evt.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_evt.json \
+    device/google/taimen/configs/thermal/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf \
+    device/google/taimen/configs/thermal/thermal-engine-vr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-vr.conf
 
 # Bug 62375603
 PRODUCT_PROPERTY_OVERRIDES += audio.adm.buffering.ms=3
@@ -107,11 +103,11 @@ PRODUCT_PROPERTY_OVERRIDES += aaudio.hw_burst_min_usec=2000
 
 # Wifi configuration file
 PRODUCT_COPY_FILES += \
-    device/google/taimen/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini
+    device/google/taimen/configs/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini
 
 # touchscreen configuration
 PRODUCT_COPY_FILES += \
-    device/google/taimen/touchscreen.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/touchscreen.idc
+    device/google/taimen/configs/keylayout/touchscreen.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/touchscreen.idc
 
 # Keymaster configuration
 PRODUCT_COPY_FILES += \
