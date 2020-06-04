@@ -53,7 +53,7 @@ CUSTOM_BUILD_TYPE := OFFICIAL
 
 # Device info
 PRODUCT_MANUFACTURER := Google
-PRODUCT_BRAND := Android
+PRODUCT_BRAND := google
 PRODUCT_NAME := aosp_taimen
 PRODUCT_DEVICE := taimen
 PRODUCT_MODEL := Pixel 2 XL
