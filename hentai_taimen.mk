@@ -18,11 +18,12 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
+# Inherit from the hentaiOS vendor
+$(call inherit-product, vendor/hentai/config/common_telephony.mk)
 
 # Inherit from device and vendor
 $(call inherit-product, device/google/taimen/device.mk)
-$(call inherit-product, vendor/google_devices/taimen/proprietary/device-vendor.mk)
-$(call inherit-product, vendor/google_extras/taimen/taimen-vendor.mk)
+$(call inherit-product, vendor/google_devices/taimen/taimen-vendor.mk)
 
 # Boot animation res
 TARGET_BOOT_ANIMATION_RES := 1440
@@ -34,7 +35,6 @@ PRODUCT_PACKAGES += \
 
 # Copy audio effects config and AOSP excluded hardware
 PRODUCT_COPY_FILES += \
-    device/google/taimen/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
     frameworks/native/data/etc/aosp_excluded_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/aosp_excluded_hardware.xml
 
 # Gapps
@@ -43,7 +43,7 @@ TARGET_GAPPS_ARCH := arm64
 # Device info
 PRODUCT_MANUFACTURER := Google
 PRODUCT_BRAND := google
-PRODUCT_NAME := aosp_taimen
+PRODUCT_NAME := hentai_taimen
 PRODUCT_DEVICE := taimen
 PRODUCT_MODEL := Pixel 2 XL
 
