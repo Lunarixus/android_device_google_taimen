@@ -45,3 +45,6 @@ PRODUCT_BRAND := Android
 PRODUCT_NAME := aosp_taimen
 PRODUCT_DEVICE := taimen
 PRODUCT_MODEL := Pixel 2 XL
+
+# GMS client ID
+PRODUCT_GMS_CLIENTID_BASE := android-google
