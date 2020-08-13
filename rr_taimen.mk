@@ -18,8 +18,8 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-# Inherit some common Evolution-X stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common RR stuff.
+$(call inherit-product, vendor/rr/config/common_full_phone.mk)
 
 # Inherit from device and vendor
 $(call inherit-product, device/google/taimen/device.mk)
@@ -45,16 +45,10 @@ TARGET_INCLUDE_STOCK_ARCORE := true
 TARGET_INCLUDE_WIFI_EXT := false
 TARGET_SUPPORTS_GOOGLE_RECORDER := false
 
-# Evolution-X Official
-EVO_DONATE_URL := https://www.paypal.me/RioTApex
-EVO_MAINTAINER := Lunarixus
-EVO_SUPPORT_URL := https://t.me/EvolutionXZeroxlte
-CUSTOM_BUILD_TYPE := OFFICIAL
-
 # Device info
 PRODUCT_MANUFACTURER := Google
 PRODUCT_BRAND := google
-PRODUCT_NAME := aosp_taimen
+PRODUCT_NAME := rr_taimen
 PRODUCT_DEVICE := taimen
 PRODUCT_MODEL := Pixel 2 XL
 
