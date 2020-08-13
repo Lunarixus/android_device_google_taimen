@@ -45,6 +45,10 @@ TARGET_INCLUDE_STOCK_ARCORE := true
 TARGET_INCLUDE_WIFI_EXT := false
 TARGET_SUPPORTS_GOOGLE_RECORDER := false
 
+# Resurrection Remix specifics
+RR_BUILDTYPE := Official
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
 # Device info
 PRODUCT_MANUFACTURER := Google
 PRODUCT_BRAND := google
