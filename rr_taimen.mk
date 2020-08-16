@@ -23,8 +23,7 @@ $(call inherit-product, vendor/rr/config/common_full_phone.mk)
 
 # Inherit from device and vendor
 $(call inherit-product, device/google/taimen/device.mk)
-$(call inherit-product, vendor/google_devices/taimen/proprietary/device-vendor.mk)
-$(call inherit-product, vendor/google_extras/taimen/taimen-vendor.mk)
+$(call inherit-product, vendor/google/taimen/taimen-vendor.mk)
 
 # Boot animation res
 TARGET_BOOT_ANIMATION_RES := 1440
