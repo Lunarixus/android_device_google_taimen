@@ -60,6 +60,8 @@ PRODUCT_GMS_CLIENTID_BASE := android-google
 
 # Device props
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=taimen \
-    BUILD_FINGERPRINT=google/taimen/taimen:10/QQ3A.200805.001/6578210:user/release-keys \
+    TARGET_DEVICE="taimen" \
+    PRODUCT_NAME="taimen" \
     PRIVATE_BUILD_DESC="taimen-user 10 QQ3A.200805.001 6578210 release-keys"
+
+BUILD_FINGERPRINT := "google/taimen/taimen:10/QQ3A.200805.001/6578210:user/release-keys"
